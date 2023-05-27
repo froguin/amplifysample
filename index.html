@@ -23,6 +23,11 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/ember.css">
 
+  <!-- Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/form.js"></script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -37,11 +42,17 @@
       <div class="one-half column" style="margin-top: 25%">
         <h4>Basic Page</h4>
         <p>Please enter values for prediction.</p>
-          <form action="https://km31wuco84.execute-api.ap-northeast-2.amazonaws.com/test/titanic-survivor-prediction/titanic">
-            <label for="AgeInput">Age</label><input type="text" name="age" id="AgeInput" />
-            <label for="CabinInput">Cabin</label><input type="text" name="cabin" id="CabinInput" />
+          <form action="js/form.js">
+            <div>
+              <label for="AgeInput">Age</label><input type="text" name="age" id="AgeInput" />
+              <label for="CabinInput">Cabin</label><input type="text" name="cabin" id="CabinInput" />
+            </div>
             <input class="button-primary" type="submit" value="Submit">
           </form>
+      </div>
+      <div class="one-half column" style="margin-top: 30%">
+        <h5>Prediction is:</h5>
+        <textarea class="u-full-width"></textarea>
       </div>
     </div>
   </div>
